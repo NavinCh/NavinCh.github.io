@@ -23,6 +23,19 @@
             $('.navbar-toggle:visible').click();
     });
 
+    //looping for image gallery
+    $(document).ready(function() {
+        for (var i = 1; i < 7; i++) {
+            $('#image-gallery').append('<div class="col-lg-4 col-sm-6" style="padding-right:0px;padding-left:0px;"><a href="img/portfolio/fullsize/'+i+'.jpg" class="portfolio-box"><img src="img/portfolio/thumbnails/'+i+'.jpg" class="img-responsive" alt=""></a></div>');
+        }  
+    });
+
+    $('#load-images').click(function(){
+        for (var i = 1; i < 7; i++) {
+            $('#image-gallery').append('<div class="col-lg-4 col-sm-6" style="padding-right:0px;padding-left:0px;"><a href="img/portfolio/fullsize/'+i+'.jpg" class="portfolio-box"><img src="img/portfolio/thumbnails/'+i+'.jpg" class="img-responsive" alt=""></a></div>');
+        }
+    });
+
     // Offset for Main Navigation
     $('#mainNav').affix({
         offset: {
